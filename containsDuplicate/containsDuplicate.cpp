@@ -1,6 +1,7 @@
 #include <vector>
 #include <algorithm>
 #include <unordered_set>
+#include <iostream>
 
 using namespace std;
 
@@ -29,3 +30,18 @@ public:
         return false;
     }
 };
+
+int main() {
+    Solution solution;
+
+    // Modify this array for each test
+    vector<int> nums = {1, 2, 3, 4, 5, 6, 7, 7};  // Test with no duplicates
+
+    // Test the naive solution
+    cout << "Naive Solution - Contains Duplicate: " << (solution.containsDuplicateNaive(nums) ? "Yes" : "No") << endl;
+
+    // Test the optimized solution with unordered_set
+    cout << "Optimized Solution - Contains Duplicate: " << (solution.containsDuplicate(nums) ? "Yes" : "No") << endl;
+
+    return 0;
+}

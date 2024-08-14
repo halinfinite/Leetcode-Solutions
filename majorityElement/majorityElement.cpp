@@ -1,6 +1,7 @@
 #include <unordered_map>
 #include <utility>
 #include <vector>
+#include <iostream>
 
 using namespace std;
 
@@ -17,7 +18,7 @@ public:
 
         int count = 0;
         int majority = nums[0];
-        for (const pair<int, int>& pair : hash) {
+        for (const pair<const int, int>& pair : hash) {
             if (pair.second > count) {
                 count = pair.second;
                 majority = pair.first;
@@ -44,3 +45,18 @@ public:
         return majority;
     }
 };
+
+int main() {
+    Solution solution;
+
+    // Modify this array for each test
+    vector<int> nums = {3, 3, 4, 2, 4, 4, 2, 4, 4};
+
+    // Test the naive solution
+    cout << "Naive Solution - Majority Element: " << solution.majorityElementNaive(nums) << endl;
+
+    // Test the Boyer-Moore solution
+    cout << "Boyer-Moore Solution - Majority Element: " << solution.majorityElement(nums) << endl;
+
+    return 0;
+}

@@ -1,0 +1,24 @@
+# Ignore object files and executables
+*.o
+*.out
+*.exe
+*.a
+*.so
+*.dylib
+
+# Ignore other build artifacts
+*.log
+*.tmp
+*.swp
+
+# Ignore compiled binaries
+bin/
+build/
+*.out
+*.run
+
+# Ignore temporary files created by editors
+*.swp
+*.swo
+*.bak
+*~
